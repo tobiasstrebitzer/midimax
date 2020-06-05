@@ -4,6 +4,7 @@ import { DrumKit, Note, Octave, Status, Velocity } from '../core/util/message'
 
 export interface MidiAdapterOptions {
   name: string
+  port?: number
 }
 
 const DEFAULTS: MidiAdapterOptions = {
@@ -18,7 +19,11 @@ export class MidiAdapter extends Adapter {
     super()
     this.options = { ...DEFAULTS, ...options }
     this.output = new Output()
-    this.output.openVirtualPort(this.options.name)
+    if (this.options.port) {
+      this.output.openPort(this.options.port)
+    } else {
+      this.output.openVirtualPort(this.options.name)
+    }
   }
 
   playNote(channel: number, note: Note, octave: Octave, velocity: Velocity) {

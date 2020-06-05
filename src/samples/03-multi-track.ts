@@ -30,7 +30,7 @@ controller.getTrack('guitar').every(1 / 16, (track, tick) => {
 })
 
 // Create Drums track
-controller.getTrack('droms').every(1 / 16, (track, tick) => {
+controller.getTrack('drums').every(1 / 16, (track, tick) => {
   if (tick % 8 === 0 || tick % 16 === 15) { track.playDrumKit(DrumKit.KICK) }
   if (tick % 4 === 1 || tick % 4 === 3) { track.playDrumKit(DrumKit.SNARE_CENTER, one(Velocity.PPP, Velocity.PPPP)) }
   if (tick % 8 === 4) { track.playDrumKit(DrumKit.SNARE_RIMSHOT, Velocity.MF) }

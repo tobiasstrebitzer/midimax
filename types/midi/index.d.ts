@@ -3,6 +3,7 @@ declare module 'midi' {
 
   export class Output {
     openVirtualPort(name: string): void
+    openPort(index: number): void
     closePort(): void
     sendMessage(message: Message): void
     getPortCount(): number
