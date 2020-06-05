@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "samples:01:simple",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${workspaceRoot}/src/samples/01-simple.ts"
+      ],
+      "runtimeArgs": [
+        "--require=ts-node/register"
+      ],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "name": "samples:02:velocity",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "${workspaceRoot}/src/samples/02-velocity.ts"
+      ],
+      "runtimeArgs": [
+        "--require=ts-node/register"
+      ],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "name": "samples:03:multi-track",
+      "type": "node",
+      "request": "launch",
+      "console": "integratedTerminal",
+      "args": [
+        "${workspaceRoot}/src/samples/03-multi-track.ts"
+      ],
+      "runtimeArgs": [
+        "--require=ts-node/register"
+      ],
+      "cwd": "${workspaceRoot}"
+    }
+  ]
+}

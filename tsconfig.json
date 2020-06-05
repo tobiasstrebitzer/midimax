@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist/",
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "types": [
+      "midi",
+      "webaudioapi",
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types/",
+      "types/"
+    ]
+  },
+  "files": [
+    "src/core/index.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}
